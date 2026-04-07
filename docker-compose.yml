@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  praq-dashboard:
+    build: .
+    ports:
+      - "3078:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
